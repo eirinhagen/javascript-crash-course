@@ -1,7 +1,7 @@
-const kisa = "Eirin";
-const age = 25;
+const s = "Hello World!";
+console.log(s.length) // property
+console.log(s.toUpperCase()); // method
+console.log(s.substring(0,5))
+const k = 'tech, comp, it'
+console.log(k.split(', ')); // split into array (different words with comma)
 
-console.log("My name is " + kisa + " and I am " + age + " years old");
-console.log(`My name is ${kisa} and I am ${age} years old `);
-const hello = `My name is ${kisa} and I am ${age} years old `
-console.log(hello)
