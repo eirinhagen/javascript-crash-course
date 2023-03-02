@@ -1,14 +1,19 @@
-//arrays
+// objects
 
-const kot = ["eyes","nose","whiskers","mouth"]
-console.log(kot)
-console.log(kot[1]) //to access one value from array
+const person = {
+    firstName : "Eirin",
+    age: 25,
+    face: {
+        nose:1,
+        eyes:2
+    }
+};
 
-kot[4] = "ears"; // to add smth to array
- kot.push("brows"); //to add  value to the end of array, it is method
-console.log(kot)
+console.log(person.age) // access as properties
 
-kot.pop(); // delete value from end
-console.log(kot)
+const {firstName,age,face:{nose}} = person;
+console.log(nose) //destructuring
 
-console.log(kot.indexOf("eyes")) // to know index of value
+person.email = "eirinhagenn@gmail.com"
+console.log(person)
+
