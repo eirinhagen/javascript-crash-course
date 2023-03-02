@@ -1,43 +1,10 @@
-const todos = [
-    {
-        id: 1,
-        text: "Learn JS",
-        isCompleted: true
-    },
-    {
-        id: 2,
-        text: "Meeting John",
-        isCompleted: false
-    }
-]
- //Loop through array
+const x = 30;
 
- for(let i=0; i<todos.length; i++){
-    console.log(todos[i].text);
- }
-
-
- for (let todo of todos){
-    console.log(todo.text)
- } // more simple way to loop through array
-
- todos.forEach(function(todo){
-    console.log(todo.text);
- });  // todos-name of array, todo- name of the variable for each value in the array
-
- const todoText = todos.map(function(todo){
-    return todo.text});
-
-    todos.map(function(todo){
-        console.log(todo.text)
-    });
-
-    console.log (todoText) //map method of goingh through an array
-
-    const todoCompleted = todos.filter(function(todo){
-        return todo.isCompleted === true;
-    }).map(function(todo){
-        return todo.text
-    });
-     console.log(todoCompleted) // its so awesome....
-     
+if(x === 10) {
+  console.log('x is 10');
+} else if(x > 10) {
+  console.log('x is greater than 10');
+} else {
+  console.log('x is less than 10')
+} 
+// simple example of if else statement
