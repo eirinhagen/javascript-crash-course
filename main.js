@@ -1,35 +1,37 @@
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
 
-// single element
- const form = document.getElementById('my-form');
- console.log(form)
+// Listen for form submit
+myForm.addEventListener('submit', onSubmit);
 
-console.log(document.querySelector('.container'))
-const x = document.querySelector('h1');
-console.log(x)
+function onSubmit(e) {
+  e.preventDefault();
+  
+  if(nameInput.value === '' || emailInput.value === '') {
+    // alert('Please enter all fields');
+    msg.classList.add('error');
+    msg.innerHTML = 'Please enter all fields';
 
-//multiple selector
-console.log( document.querySelectorAll('.item'));
-const items =  document.querySelectorAll('.item')
+    // Remove error after 3 seconds
+    setTimeout(() => msg.remove(), 3000);
+  } else {
+    // Create new list item with user
+    const li = document.createElement('li');
 
-items.forEach((item)=>console.log(item));
+    // Add text node with input values
+    li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
 
+    // Add HTML
+    // li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;
 
-const ul = document.querySelector('.items');
-// ul.remove();
-// ul.lastElementChild.remove()
+    // Append to ul
+    userList.appendChild(li);
 
-ul.firstElementChild.textContent = "Hello";
-ul.children[1].innerHTML = "Eirin" // the other way to change the text
-ul.lastElementChild.innerHTML = "<h1>Hello!</h1>";
-
-const btn = document.querySelector('.btn');
-// btn.style.background = 'red';
-
-btn.addEventListener('click',(e) => { 
-    e.preventDefault();                                            // first "click " is event and second is the function, e is event-parameter
-   // console.log(e.target.className); // target is an actual element
-   document.querySelector('#my-form').style.background= '#ccc'
-   document.querySelector('body').classList.add('bg-dark')
-   document.querySelector('.items').lastElementChild.innerHTML = '<h1>myaw</h1>'
-});
-
+    // Clear fields
+    nameInput.value = '';
+    emailInput.value = '';
+  }
+}
