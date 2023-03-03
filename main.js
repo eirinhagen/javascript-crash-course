@@ -1,31 +1,12 @@
-// functions
+function Person(firstName,lastName,dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob)
+}
 
-function addNums(num1,num2) {
-    console.log(num1 + num2)
- }
+const person1 = new Person("John", "Hagen","1-24-1992")
 
- addNums(2,2)
+const person2 = new Person("Eirin","Hagen","2-13-1998")
 
- const addNumbers =( n1 = 1, n2 = 2)=>  n1 + n2;
-  console.log(addNumbers()) //arrow function
+ console.log(person2)
  
-  const kisa = x => "myaw";
-  console.log(kisa()) //af 2
-
-
-
-
-  const myFriends = ["dasha","nadja","elisa"]
-  myFriends.forEach((friend)=>console.log(friend))
-
-  const friends = [
-    {name:"Dasha",
-    face:"beautiful"},
-    {name:"Nadja",
-    face:"beautiful"},
-    {name:"Elisa",
-    face:"beautiful"}
-  ];
-
-  friends.forEach((friend)=>console.log(friend.face));
-  
