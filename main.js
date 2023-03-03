@@ -1,16 +1,31 @@
-const x = 30;
+// functions
 
-if(x === 10) {
-  console.log('x is 10');
-} else if(x > 10) {
-  console.log('x is greater than 10');
-} else {
-  console.log('x is less than 10')
-} 
-// simple example of if else statement
- //|| two of statements are true
-// && one statement is true
+function addNums(num1,num2) {
+    console.log(num1 + num2)
+ }
 
-const k = 10;
-const color = k >5 ? "red" : "blue" ;
-console.log(color) // shortcut to the if else
+ addNums(2,2)
+
+ const addNumbers =( n1 = 1, n2 = 2)=>  n1 + n2;
+  console.log(addNumbers()) //arrow function
+ 
+  const kisa = x => "myaw";
+  console.log(kisa()) //af 2
+
+
+
+
+  const myFriends = ["dasha","nadja","elisa"]
+  myFriends.forEach((friend)=>console.log(friend))
+
+  const friends = [
+    {name:"Dasha",
+    face:"beautiful"},
+    {name:"Nadja",
+    face:"beautiful"},
+    {name:"Elisa",
+    face:"beautiful"}
+  ];
+
+  friends.forEach((friend)=>console.log(friend.face));
+  
